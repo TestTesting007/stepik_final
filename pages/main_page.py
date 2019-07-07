@@ -1,8 +1,6 @@
-link = "http://selenium1py.pythonanywhere.com/"
+from .base_page import BasePage
+from selenium.webdriver.common.by import By
 
-def go_to_login_page(browser):
-    browser.find_element_by_css_selector("#login_link").click()
-
-def test_guest_can_go_to_login_page(browser):
-    browser.get(link)
-    go_to_login_page(browser)
+class MainPage(BasePage):
+    def go_to_login_page(self):
+        self.browser.find_element(By.CSS_SELECTOR,"#login_link").click()
