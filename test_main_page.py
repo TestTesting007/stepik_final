@@ -6,7 +6,7 @@ LINK2 = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handboo
 
 
 # тест - гость может перейти на страницу с логином
-def test_guest_can_go_to_login_page(browser): #гость может перейти на страницу с логином
+def test_guest_can_go_to_login_page(browser):
     page = MainPage(browser,LINK)
     page.open()
     page.go_to_login_page()
