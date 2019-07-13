@@ -15,3 +15,14 @@ class ProductPage(BasePage):
         price = self.browser.find_element(*ProductPageLocators.PRICE_ITEM).text
         price_cart = self.browser.find_element(*ProductPageLocators.PRICE_ITEM_CART).text
         assert price == price_cart, "price another ={}".format(price_cart)
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.MESSAGESUCCESS), \
+            "Success message is presented, but should not be"
+
+    def should_not_be_success_message_d(self):
+        assert self.is_disappeared(*ProductPageLocators.MESSAGESUCCESS), \
+            "Success message is presented, but should not be"
+
+
+

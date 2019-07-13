@@ -1,5 +1,10 @@
 from selenium.webdriver.common.by import By
 
+
+class BasePageLocators(object):
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+
 class MainPageLocators(object):
     LOGIN_LINK = (By.CSS_SELECTOR,"#login_link")
 
@@ -13,3 +18,9 @@ class ProductPageLocators(object):
     ITEM_NAME_CART = (By.CSS_SELECTOR, ".alertinner>strong")
     PRICE_ITEM = (By.CSS_SELECTOR, ".product_main > .price_color")
     PRICE_ITEM_CART = (By.CSS_SELECTOR, ".alertinner>p>strong")
+    MESSAGESUCCESS = (By.CSS_SELECTOR, "#messages .alert-success:first-child")
+
+class CartPageLocators(object):
+    GOTOCART=(By.CSS_SELECTOR,".btn-group>a.btn.btn-default")
+    CARTISEMPTY = (By.CSS_SELECTOR,"#content_inner >p")
+    LISTITEMS=(By.CSS_SELECTOR,".basket-items")
