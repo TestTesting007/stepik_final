@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 class BasePageLocators(object):
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 class MainPageLocators(object):
     LOGIN_LINK = (By.CSS_SELECTOR,"#login_link")
@@ -24,3 +25,9 @@ class CartPageLocators(object):
     GOTOCART=(By.CSS_SELECTOR,".btn-group>a.btn.btn-default")
     CARTISEMPTY = (By.CSS_SELECTOR,"#content_inner >p")
     LISTITEMS=(By.CSS_SELECTOR,".basket-items")
+
+class RegistrationUsers(object):
+    EMAIL = (By.CSS_SELECTOR,"#id_registration-email")
+    PASSWORD1 = (By.CSS_SELECTOR,"#id_registration-password1")
+    PASSWORD2 = (By.CSS_SELECTOR,"#id_registration-password2")
+    BUTTON = (By.CSS_SELECTOR,"[name='registration_submit']")
